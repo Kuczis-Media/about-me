@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Key Detector - Kuczi$</title>
+    <link rel="shortcut icon"  href="../logo.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      .kuczi-credit {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #f8f8f8;
+        font-family: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 9999;
+      }
+      .kuczi-credit:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p class="text">Press any key</p>
+      <div class="content">
+        <div class="key-code"></div>
+        <div class="key-name"></div>
+        <div class="details">
+          <p class="key">Key: <span></span></p>
+          <p class="code">Code: <span></span></p>   
+        </div>
+      </div>
+    </div>
+    <script>
+      const box = document.querySelector(".box");
+      document.addEventListener("keydown", e =>{
+        let keyName = e.keyCode === 32 ? "Space" : e.key;
+        box.querySelector(".key-code").innerText = e.keyCode;
+        box.querySelector(".key-name").innerText = keyName.toUpperCase();
+        box.querySelector(".key span").innerText = keyName;
+        box.querySelector(".code span").innerText = e.keyCode;  
+        box.classList.add("active");
+      });
+    </script>
+      <a class="kuczi-credit" href="/">© Kuczi$</a>
+</body>
+</html>
