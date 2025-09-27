@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar - Kuczi$</title>
+    <link rel="shortcut icon"  href="../logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script>
+      <style>
+      .kuczi-credit {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #f8f8f8;
+        font-family: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 9999;
+      }
+      .kuczi-credit:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <p class="current-date"></p>
+        <div class="icons">
+          <span id="prev" class="material-symbols-rounded">chevron_left</span>
+          <span id="next" class="material-symbols-rounded">chevron_right</span>
+        </div>
+      </header>
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="days"></ul>
+</div>
+     
+    </div>
+    
+
+    
+      <a class="kuczi-credit" href="/">© Kuczi$</a>
+</body>
+</html>

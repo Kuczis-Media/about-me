@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Beer Menu - Kuczi$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logo.png">
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top, #f6b73c 0%, #f09020 40%, #151515 100%);
+        color: #fef6e4;
+        padding: 2rem;
+      }
+      .menu {
+        width: min(900px, 100%);
+        background: rgba(15, 15, 15, 0.85);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+      }
+      h1 {
+        margin-top: 0;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        text-align: center;
+        letter-spacing: 0.15em;
+      }
+      p.subtitle {
+        text-align: center;
+        color: rgba(254, 246, 228, 0.75);
+        margin-bottom: 2.5rem;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 1.25rem;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(246, 183, 60, 0.12);
+        border-radius: 1rem;
+        padding: 1.25rem 1.75rem;
+        backdrop-filter: blur(4px);
+      }
+      li span:first-child {
+        font-weight: 600;
+        font-size: 1.15rem;
+      }
+      li span:last-child {
+        font-size: 0.95rem;
+        color: rgba(254, 246, 228, 0.75);
+      }
+      .back-link {
+        margin-top: 2.5rem;
+        text-align: center;
+      }
+      .back-link a {
+        color: rgba(254, 246, 228, 0.85);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+      .back-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+      <style>
+      .kuczi-credit {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #f8f8f8;
+        font-family: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 9999;
+      }
+      .kuczi-credit:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <h1>Beer Menu</h1>
+      <p class="subtitle">Craft picks for a relaxed evening</p>
+      <ul>
+        <li><span>Imperial Stout</span><span>11% • roasted coffee, dark chocolate, vanilla</span></li>
+        <li><span>New England IPA</span><span>6.5% • juicy citrus, mango, low bitterness</span></li>
+        <li><span>Belgian Tripel</span><span>8.5% • honey sweetness, spicy yeast, smooth finish</span></li>
+        <li><span>Baltic Porter</span><span>9% • plum, cocoa nibs, light smokiness</span></li>
+        <li><span>Kölsch</span><span>4.8% • crisp, floral, perfect for summer evenings</span></li>
+        <li><span>Witbier</span><span>5% • orange peel, coriander, refreshing wheat body</span></li>
+      </ul>
+      <div class="back-link"><a href="../../index.html">Wróć na stronę główną</a></div>
+    </div>
+      <a class="kuczi-credit" href="/">© Kuczi$</a>
+</body>
+</html>
