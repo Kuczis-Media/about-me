@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Text To Speech - Kuczi$</title>
+    <link rel="shortcut icon"  href="../logo.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+      .kuczi-credit {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #f8f8f8;
+        font-family: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 9999;
+      }
+      .kuczi-credit:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Text To Speech</header>
+      <form action="#">
+        <div class="row">
+          <label>Enter Text</label>
+          <textarea></textarea>
+        </div>
+        <div class="row">
+          <label>Select Voice</label>
+          <div class="outer">
+            <select></select>
+          </div>
+        </div>
+        <button>Convert To Speech</button>
+</form>
+    </div>
+
+    <script src="script.js"></script>
+
+      <a class="kuczi-credit" href="/">© Kuczi$</a>
+</body>
+</html>
